@@ -3,37 +3,10 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-
-    /* พื้นหลังสีรุ้ง */
-    background: linear-gradient(
-        -45deg,
-        red,
-        orange,
-        yellow,
-        green,
-        cyan,
-        blue,
-        indigo,
-        violet
-    );
-    background-size: 400% 400%;
-    animation: rainbowBG 10s ease infinite;
-
-    color: #444;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* พื้นหลังสีรุ้งเคลื่อนไหว */
-@keyframes rainbowBG {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
 
 /* Header สีรุ้ง */
 header {
@@ -134,7 +107,17 @@ h3 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+.project {
+    margin-bottom: 20px;
+}
+.project h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+ ul {
+     list-style-type:square;
+     padding-left: 20px;
+ }
 /* Footer สีรุ้ง */
 footer {
     text-align: center;
