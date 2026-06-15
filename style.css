@@ -3,97 +3,87 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #000;
-    color: #fff;
-    animation: blackWhite 6s infinite alternate;
-    transition: all 0.5s ease;
+    /* ไล่เฉดสีฟ้า-น้ำเงิน: น้ำเงินเข้มอวกาศ, ฟ้าไซเบอร์, ฟ้าพาสเทล, น้ำเงินกรมท่า */
+    background: linear-gradient(-45deg, #03001e, #1f4068, #00d2ff, #001f3f);
+    background-size: 400% 400%;
+    animation: bgMove 10s ease infinite;
+    color: #e6f7ff; /* ตัวอักษรสีฟ้าอ่อนมาก ๆ อ่านง่ายและเข้าธีม */
 }
-
-@keyframes blackWhite {
-    0% {
-        background: #000000;
-        color: #ffffff;
-    }
-    100% {
-        background: #ffffff;
-        color: #000000;
-    }
-}
-
 header {
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    color: white;
-    padding: 25px 0;
+    /* ไล่เฉดสีเน้นโทนน้ำเงินเข้มขอบฟ้า */
+    background: linear-gradient(90deg, #001f3f, #111d4a, #000c1a);
+    color: #00f3ff; /* สีฟ้านีออนสว่าง */
+    padding: 20px 0;
     text-align: center;
-    border-bottom: 2px solid #fff;
-    box-shadow: 0 0 20px rgba(255,255,255,0.5);
     animation: fadeDown 1s ease;
+    border-bottom: 2px solid #00d2ff; /* เส้นขอบเรืองแสงสีฟ้า */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
-    text-shadow: 0 0 10px #fff;
+    text-shadow: 0 0 10px #00f3ff, 0 0 20px #0044ff; /* เรืองแสงสีฟ้า */
 }
 
 header p {
-    margin-top: 8px;
+    margin: 5px 0 0;
+    color: #9cdeff; /* สีฟ้าพาสเทล */
 }
 
 section {
-    max-width: 850px;
-    margin: 25px auto;
-    padding: 25px;
-    border-radius: 15px;
-    background: rgba(20, 20, 20, 0.85);
-    color: #ffffff;
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.2);
-    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    /* กล่องข้อความแบบกระจกมืดโปร่งแสง โทนน้ำเงินเข้ม */
+    background: rgba(10, 25, 47, 0.85); 
+    border: 1px solid rgba(0, 210, 255, 0.15);
+    border-radius: 12px;
+    /* เงารอบกล่องสีฟ้าเรืองแสงอ่อน ๆ */
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
     animation: fadeUp 1s ease;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 section:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: scale(1.03);
+    /* เรืองแสงสีฟ้าเข้มข้นขึ้นเมื่อ Mouse Over */
+    box-shadow: 0 0 30px rgba(0, 243, 255, 0.5);
+    border: 1px solid rgba(0, 243, 255, 0.4);
 }
 
 h2 {
-    color: #ffffff;
+    color: #00f3ff; /* หัวข้อสีฟ้านีออน */
+    text-shadow: 0 0 5px rgba(0, 243, 255, 0.3);
 }
 
 .project {
-    margin-bottom: 25px;
-    padding: 15px;
-    border-left: 3px solid #ffffff;
+    margin-bottom: 20px;
 }
 
 .project h3 {
     margin: 0 0 10px;
+    color: #38b6ff; /* หัวข้อย่อยสีฟ้าสดใส */
 }
 
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+    color: #9cdeff; /* สีลิสต์รายการเป็นสีฟ้าอ่อน */
 }
 
 footer {
     text-align: center;
-    padding: 15px;
-    background: rgba(0,0,0,0.85);
-    color: white;
-    border-top: 2px solid white;
+    padding: 10px 0;
+    background: linear-gradient(90deg, #000c1a, #111d4a, #001f3f);
+    color: #00d2ff;
+    margin-top: 20px;
+    border-top: 2px solid #00d2ff;
 }
 
+/* Animation */
 @keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -104,10 +94,10 @@ footer {
 @keyframes fadeDown {
     from {
         opacity: 0;
-        transform: translateY(-40px);
+        transform: translateY(-30px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
-}
+ }
